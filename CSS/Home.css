@@ -1,3 +1,8 @@
+/* Start varisables */
+:root {
+    --main-color: #10cab7;
+}
+/* End variables */
 /* Start global rules */
 * {
     -webkit-box-sizing: border-box;
@@ -36,10 +41,9 @@ body {
         width: 1170px;
     }
 }
-/* End global rules */ 
+/* End global rules */
 
 /* Start Header */
-
 .header {
     padding: 20px;
 }
@@ -69,7 +73,7 @@ body {
     justify-content: flex-end;
 }
 
-.header .links .icon span{
+.header .links .icon span {
     background-color: #333;
     margin-bottom: 5px;
     height: 2px;
@@ -98,6 +102,7 @@ body {
     min-width: 200px;
     top: calc(100% + 15px);
     display: none;
+    z-index: 1;
 }
 
 .header .links ul::before {
@@ -114,21 +119,86 @@ body {
     display: block;
 }
 
-.header .links ul li a{
+.header .links ul li a {
     display: block;
     padding: 15px;
     text-decoration: none;
-    color: #333;
+    color: #222;
     transition: 0.3s;
 }
 
-.header .links ul li:not(:last-child) a{
+.header .links ul li:not(:last-child) a {
     border-bottom: 2px solid #eee;
 }
 
-.header .links ul li a:hover{
+.header .links ul li a:hover {
     padding-left: 25px;
 }
-
-
 /* End Header */
+
+/* Start Landing section  */
+.landing {
+    background-image: url(../Images/Landing.jpeg);
+    background-size: cover;
+    height: calc(100vh - 64px);
+    position: relative;
+}
+
+.landing .intro-text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+}
+
+.landing .intro-text h1 {
+    margin: 0;
+    font-weight: bold;
+    font-size: 50px;
+    color: var(--main-color);
+}
+
+.landing .intro-text p {
+    font-size: 19px;
+    line-height: 1.8;
+    font-weight: 600;
+    color: #222;
+}
+/* End Landing section  */
+
+/* Start features */
+.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    grid-gap: 20px;
+}
+
+.features .feat {
+    padding: 20px;
+    text-align: center;
+}
+
+.features .feat i {
+    color: var(--main-color);
+}
+
+.features .feat h3 {
+    font-weight: 800;
+    margin: 30px 0;
+}
+
+.features .feat p {
+    line-height: 1.8;
+    color: #777;
+    font-size: 17px;
+}
+/* End features */
