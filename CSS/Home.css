@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: "Work Sans", sans-serif;
 }
@@ -49,6 +53,22 @@ body {
 /* End Global Rules */
 
 /* Start Components */
+.gotopbtn {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    background-color: var(--secondary-color);
+    bottom: 20px;
+    right: 30px;
+    text-decoration: none;
+    text-align: center;
+    z-index: 100;
+    line-height: 32px;
+    color: var(--main-color);
+    font-size: 22px;
+    border-radius: 50%;
+}
+
 .special-heading {
     color: #ebeced;
     font-size: 100px;
@@ -159,7 +179,7 @@ body {
     padding: 15px;
     text-decoration: none;
     color: #222;
-    transition: 0.3s;
+    transition: 0.5s;
 }
 
 .header .links ul li:not(:last-child) a {
@@ -490,11 +510,13 @@ body {
 }
 
 @media (max-width:767px) {
+
     .contact .info .label,
     .contact .info .link {
         font-size: 20px;
     }
 }
+
 /* End Contact */
 
 /* Start Footer */
@@ -510,4 +532,5 @@ body {
     font-weight: bold;
     color: var(--main-color);
 }
+
 /* End Footer */
