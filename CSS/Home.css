@@ -345,6 +345,7 @@ body {
 
 .portfolio .portfolio-content .card .info h3 {
     margin: 0;
+    cursor: pointer;
 }
 
 .portfolio .portfolio-content .card .info p {
@@ -485,6 +486,7 @@ body {
 .contact .info .social i {
     margin-left: 10px;
     color: var(--secondary-color);
+    cursor: pointer;
 }
 
 @media (max-width:767px) {
