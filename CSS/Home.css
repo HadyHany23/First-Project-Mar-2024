@@ -1,4 +1,4 @@
-/* Start varisables */
+/* Start variables */
 :root {
     --main-color: #10cab7;
     --secondary-color: #2c4755;
@@ -6,6 +6,24 @@
     --section-background: #f6f6f6;
 }
 
+::selection {
+    color: var(--secondary-color);
+    background-color: var(--main-color);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--secondary-color,#333);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--main-color,#eee);
+}
 /* End variables */
 /* Start global rules */
 * {
@@ -58,8 +76,8 @@ body {
     width: 30px;
     height: 30px;
     background-color: var(--secondary-color);
-    bottom: 20px;
-    right: 30px;
+    bottom: 1vh;
+    right: 1vw;
     text-decoration: none;
     text-align: center;
     z-index: 100;
@@ -67,6 +85,10 @@ body {
     color: var(--main-color);
     font-size: 22px;
     border-radius: 50%;
+}
+
+.gotopbtn:hover {
+    background-color: transparent;
 }
 
 .special-heading {
@@ -101,6 +123,10 @@ body {
 .header {
     padding: 20px;
     background-color: #777;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100vw;
 }
 
 .header .container {
@@ -196,7 +222,7 @@ body {
 .landing {
     background-image: url(../Images/Landing.jpeg);
     background-size: cover;
-    height: calc(100vh - 64px);
+    height: calc(100vh);
     position: relative;
 }
 
